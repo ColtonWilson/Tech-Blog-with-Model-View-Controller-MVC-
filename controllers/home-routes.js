@@ -25,18 +25,18 @@ router.get('/', async (req, res) => {
 });
 
 // GET all Posts for id
-router.get('/:id', async (req, res) => {
+router.get('/dashboard', async (req, res) => {
   try {
     const postData = await Post.findAll({
       include: [{model: Comment}, {model: User}],
     });
 
-    const posts = postData.map((post) =>
+    const userPosts = postData.map((post) =>
       post.get({ plain: true })
     );
 
     res.status(200).render('dashboard', {
-      posts,
+      userPosts,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
