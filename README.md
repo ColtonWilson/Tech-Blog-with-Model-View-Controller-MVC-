@@ -1,6 +1,20 @@
-# Tech-Blog-with-Model-View-Controller-MVC-
+# Tech-Blog-with-Model-View-Controller-MVC
+![License Badge](https://shields.io/badge/license-MIT-yellow)
+## Table of Contents
+1. [Description](#description)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Contributing](#contributing)
+5. [Tests](#tests)
+6. [License](#license)
+7. [Questions](#questions)
 
-##Server setup steps when seeding database with a JavaScript file:
+## Description
+Creating a tech blog by using a CMS-style, a SQL server, handlebars, express, and sequelize to be able to add posts and comment on posts as long as the user is logged in.
+
+## Installation
+
+###Server setup steps when seeding database with a JavaScript file:
 
 1. Set login information in .env file
 <pre>
@@ -29,12 +43,7 @@ quit
 npm i
 </pre>
 
-6. Install dotenv
-<pre>
-npm i dotenv
-</pre>
-
-7. Install Prettier
+6. Install Prettier
 <pre>
 npm install
 npm install prettier eslint-config-prettier --save-dev
@@ -67,52 +76,65 @@ d. Inform ESLint that we are using Prettier
 
 - The [Prettier documentation on options](https://prettier.io/docs/en/options.html) explains other configurations that you can add to the `.prettierrc.json` file.
 
-8. Install Lint
+7. Install Lint
 <pre>
 npm install eslint
 </pre>
 
-9. Install Handlebars
+8. Install Handlebars
 <pre>
 npm install express-handlebars
 </pre>
 
-10. Install Mysql
+9. Install Mysql
 <pre>
 npm install --save mysql2
 </pre>
 
-11. Install Sequelize
+10. Install Sequelize
 <pre>
 npm install --save sequelize
 </pre>
 
-12. Install dotenv
+11. Install dotenv
 <pre>
 npm install dotenv --save
 </pre>
 
-13. Install bcrypt
+12. Install bcrypt
 <pre>
 npm install bcrypt
 </pre>
 
-14. Install Express-session
+13. Install Express-session
 <pre>
 npm install express-session
 </pre>
 
-15. Install Connect Session Store using Sequelize
+14. Install Connect Session Store using Sequelize
 <pre>
 npm install connect-session-sequelize
 </pre>
 
-16. Seed the database
+15. Seed the database
 <pre>
 node ./seeds/index.js
 </pre>
 
-17. Start Server
+16. Start Server
 <pre>
 npm start
 </pre>
+
+## Usage
+running code
+## Contributing
+Submit bug and feature requests
+## Tests
+No Tests Provided
+## License
+Please see https://mit-license.org/ to get detailed information for this license
+
+## Questions
+You can find me [HERE](https://github.com/ColtonWilson) on Github
+You can email me at colton_wilson93@yahoo.com if you have any additional questions.
