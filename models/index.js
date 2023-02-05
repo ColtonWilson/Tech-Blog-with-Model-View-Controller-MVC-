@@ -6,6 +6,7 @@ const Post = require('./Post');
 //User can have more than one comment
 User.hasMany(Comment, {
   foreignKey: 'user_id',
+  onDelete: "cascade"
 });
 
 //Each comment belongs to a User, on delete also delete comments under
@@ -17,6 +18,7 @@ Comment.belongsTo(User, {
 //User can have more than one Post
 User.hasMany(Post, {
   foreignKey: 'user_id',
+  onDelete: "cascade"
 });
 
 //Each post belongs to a User, on delete also delete comments under
@@ -28,6 +30,7 @@ Post.belongsTo(User, {
 //Post can have more than one comment
 Post.hasMany(Comment, {
   foreignKey: 'post_id',
+  onDelete: "cascade"
 });
 
 //Each comment belongs to a Post, on delete also delete comments under
