@@ -91,19 +91,6 @@ nav a:hover {
 }
 
 
-.painting {
-  width: 50%;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 25px;
-}
-
-.painting-details {
-  text-align: center;
-  padding: 10px 20px;
-  font-weight: bold;
-}
-
 /* CARDS */
 .card {
   margin: 20px;
@@ -141,13 +128,38 @@ nav a:hover {
 
 .post_name_date{
     float: right;
-    color: var(--secondary)
+    color: var(--secondary);
+    
+}
+
+
+.post_comment_header{
+  background-color: var(--primary);
+  border: 3px solid var(--dark);
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  flex:1;
+}
+
+.post_name{
+ float: left;   
+}
+
+
+.post_date{
+ float: right;   
 }
 
 .card_body {
   font-size: 1.4rem;
   text-align:left;
   font-weight: bold;
+}
+
+.add_comment_button{
+  display: flex;
+  justify-content: center;
 }
 
 .gallery-name {

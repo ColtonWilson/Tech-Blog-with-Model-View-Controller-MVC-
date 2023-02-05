@@ -71,4 +71,27 @@ router.post('/logout', (req, res) => {
   }
 });
 
+
+// CREATE new comment
+router.post('/add-comment', async (req, res) => {
+  try {
+    const dbUserData = await Comment.create({
+      comment_date: req.body.date,
+      comment_desc: req.body.content,
+      user_id: req.body.user,
+      post_id: req.body.post,
+    });
+
+    req.session.save(() => {
+      req.session.loggedIn = true;
+
+      res.status(200).json(dbUserData);
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+
 module.exports = router;

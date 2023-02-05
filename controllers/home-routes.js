@@ -24,6 +24,27 @@ router.get('/', async (req, res) => {
   }
 });
 
+// GET all Posts for id
+router.get('/:id', async (req, res) => {
+  try {
+    const postData = await Post.findAll({
+      include: [{model: Comment}, {model: User}],
+    });
+
+    const posts = postData.map((post) =>
+      post.get({ plain: true })
+    );
+
+    res.status(200).render('dashboard', {
+      posts,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 // GET one Post
 router.get('/post/:id',withAuth, async (req, res) => {
   // If the user is not logged in, redirect the user to the login page
@@ -80,6 +101,17 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
+});
+
+
+//GET add-comment Page
+router.get('/post/:id/add-comment', (req, res) => {
+  if (req.session.loggedIn) {
+    res.render('add-comment', { loggedIn: req.session.loggedIn });
+    return;
+  }
+
+  res.redirect('/');
 });
 
 module.exports = router;
