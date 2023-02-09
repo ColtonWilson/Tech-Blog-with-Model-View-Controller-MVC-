@@ -11,6 +11,13 @@
 
 ## Description
 Creating a tech blog by using a CMS-style, a SQL server, handlebars, express, and sequelize to be able to add posts and comment on posts as long as the user is logged in.
+<br>
+Working code:[Link](https://tech-blog-with-mvc.herokuapp.com/)
+<br>
+Screenshot:
+<br>
+![screenshot of working products](https://github.com/ColtonWilson/E-Commerce_With_ORM/blob/main/assets/products.png)
+
 
 ## Installation
 
